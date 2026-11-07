@@ -1,0 +1,43 @@
+SafeSight — Brand Pack
+
+PRIMARY STORY
+SafeSight helps workers see risk before it becomes an accident.
+
+LOGO
+The approved mark is the geometric S symbol supplied in this pack.
+Use the primary black version on light backgrounds and the white version on dark backgrounds.
+Keep the symbol proportions unchanged. Do not stretch, rotate, outline, or add effects.
+
+PRIMARY COLORS
+Onyx Black
+HEX: #000000
+RGB: 0, 0, 0
+
+Pure White
+HEX: #FFFFFF
+RGB: 255, 255, 255
+
+Safety Yellow — accent only
+HEX: #FFC107
+RGB: 255, 193, 7
+
+COLOR USE
+Black and white are the core identity.
+Use Safety Yellow sparingly for calls-to-action, highlights, hazard/safety signals, and key UI states.
+
+WORDMARK
+The supplied SafeSight wordmark artwork is the approved wordmark.
+For consistency, use the SVG/PNG wordmark assets instead of retyping the logo text.
+
+CLEAR SPACE
+Keep clear space around the mark equal to approximately 20% of the icon width whenever possible.
+
+MINIMUM DIGITAL SIZE
+Primary icon: 16 px minimum.
+Horizontal logo: 120 px wide minimum where readability matters.
+
+FILES
+SVG = preferred for websites, print, presentations, and scalable use.
+PNG = transparent-background raster exports for apps, slides, documents, and social media.
+
+All PNG assets in this pack have transparent backgrounds unless a mockup/reference sheet is explicitly included.
