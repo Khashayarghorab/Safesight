@@ -34,7 +34,13 @@ export function Header() {
 export function Footer() {
   return <footer className="site-footer">
     <div className="container footer-main">
-      <div className="footer-brand"><Link className="brand" href="/" aria-label="SafeSight home"><img src="/brand/safesight-white.svg" width="2172" height="724" alt="SafeSight" /></Link><p>Safety Through<br />Intelligence</p><span className="mono muted">WEARABLE AI · HUMAN-LED SAFETY</span></div>
+      <div className="footer-brand"><Link className="brand" href="/" aria-label="SafeSight home"><img src="/brand/safesight-white.svg" width="2172" height="724" alt="SafeSight" /></Link><p>Safety Through<br />Intelligence</p><span className="mono muted">WEARABLE AI · HUMAN-LED SAFETY</span>
+        <nav aria-label="SafeSight social media" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          <a className="py-1 hover:text-safety" href="https://www.linkedin.com/company/safesight-ca/">LinkedIn</a>
+          <a className="py-1 hover:text-safety" href="https://www.instagram.com/safesight.ca/">Instagram</a>
+          <a className="py-1 hover:text-safety" href="https://www.youtube.com/@Safesight-ca">YouTube</a>
+        </nav>
+      </div>
       <div className="footer-column"><p className="footer-label">Explore</p>{navigation.slice(1).map(({ href, label }) => <Link key={href} href={href}>{label}</Link>)}</div>
       <div className="footer-column footer-contact"><p className="footer-label">Let’s build something meaningful.</p><a href={`mailto:${site.email}`} className="footer-email">{site.email}<Icon name="diagonal" /></a><p>For research conversations,<br />and technology collaboration.</p><span className="development-tag"><span className="status-dot" />In development</span></div>
     </div>
