@@ -5,10 +5,8 @@ import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'SafeSight – Safety Through Intelligence', template: '%s | SafeSight' },
+  title: 'SafeSight',
   description: site.description,
-  openGraph: { type: 'website', locale: 'en_CA', siteName: 'SafeSight', title: 'SafeSight – Safety Through Intelligence', description: site.description, images: [{ url: '/images/construction-hero.webp', alt: 'Illustrative construction scene for SafeSight' }] },
-  twitter: { card: 'summary_large_image' },
   icons: { icon: '/brand/safesight-icon.svg' },
   robots: { index: true, follow: true },
 };

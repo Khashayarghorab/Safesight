@@ -1,17 +1,30 @@
+import { pageMetadata } from '@/lib/metadata';
+import { site } from '@/lib/site';
 import Link from 'next/link';
 import { Eyebrow, FAQ, Pilot } from '@/components/shared';
 import { Icon } from '@/components/icons';
 import ProductConcept from '@/components/product-concept';
 import DemoVideo from '@/components/demo-video';
-export const metadata = { alternates: { canonical: '/' } };
+export const metadata = pageMetadata(
+  'Wearable AI for Construction Safety',
+  site.description,
+  '/',
+);
 export default function Home() {
   return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: site.name,
+      url: site.url,
+      inLanguage: 'en-CA',
+    }) }} />
     <section className="hero" aria-labelledby="hero-heading">
       <img className="hero-image" src="/images/construction-hero.webp" alt="" width="1920" height="1080" fetchPriority="high" />
       <div className="hero-shade" />
       <div className="hero-inner">
-        <div className="hero-topline"><Eyebrow>Construction safety. A new perspective.</Eyebrow><span className="development-tag"><span className="status-dot" />In development</span></div>
-        <div className="hero-copy"><h1 id="hero-heading">Safety Through<br />Intelligence</h1><p>Less paperwork. Clearer review. Better follow-through.</p><p className="hero-description">SafeSight is developing tools to help safety managers turn field observations into useful records, review AI suggestions, and keep track of next steps.</p><div className="hero-actions"><Link className="button" href="/contact/#inquiry">Start a conversation <Icon name="diagonal" /></Link><Link href="/technology/" className="hero-secondary">Discover the technology <Icon name="arrow" /></Link></div></div>
+        <div className="hero-topline"><Eyebrow>Safety Through Intelligence</Eyebrow><span className="development-tag"><span className="status-dot" />In development</span></div>
+        <div className="hero-copy"><h1 id="hero-heading">Wearable AI for construction safety</h1><p>Less paperwork. Clearer review. Better follow-through.</p><p className="hero-description">{site.description}</p><div className="hero-actions"><Link className="button" href="/contact/#inquiry">Start a conversation <Icon name="diagonal" /></Link><Link href="/technology/" className="hero-secondary">Discover the technology <Icon name="arrow" /></Link></div></div>
         <div className="hero-bottom"><a href="#approach" className="scroll-link"><span className="scroll-circle"><Icon name="arrow" /></span>Meet the SafeSight approach</a><span className="hero-coordinate mono">A CLEARER VIEW.<br />A HUMAN DECISION.</span></div>
       </div>
       <span className="hero-image-credit">Illustrative construction scene</span>

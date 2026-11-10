@@ -1,10 +1,15 @@
+import { pageMetadata } from '@/lib/metadata';
 import { Eyebrow, PageIntro, Pilot } from '@/components/shared';
 import { Icon } from '@/components/icons';
 import Workflow from '@/components/workflow';
-export const metadata = { title: 'Technology', description: 'SafeSight is in development: exploring easier safety documentation, AI-assisted review, and human-led corrective-action follow-up.', alternates: { canonical: '/technology/' } };
+export const metadata = pageMetadata(
+  'AI-Assisted Construction Safety Inspections',
+  'Explore how SafeSight is investigating smart glasses, field notes, and human review to support construction safety inspections and corrective-action follow-up.',
+  '/technology/',
+);
 export default function Technology() {
   return <>
-    <PageIntro label="Technology / In development" title="An additional perspective. A human decision."><p>Follow an observation from wearable capture to review and action. This is the workflow we are investigating.</p></PageIntro>
+    <PageIntro label="Technology / In development" title="How could AI support construction safety inspections?"><p>Follow an observation from wearable capture to review and action. This is the workflow we are investigating.</p></PageIntro>
     <section className="workflow-section"><div className="container section"><div className="section-heading"><div><Eyebrow number="01">The intended workflow</Eyebrow><h2>Observe. Understand. Decide.</h2></div><p className="section-aside">Explore each step below.<br />A concept, not a live system.</p></div><Workflow /></div></section>
     <section className="container section technology-priorities"><div className="section-heading"><div><Eyebrow number="02">What we’re evaluating</Eyebrow><h2>Designed for the job site.<br />Grounded in its realities.</h2></div><p className="section-aside">Field performance has to be earned.<br />These are our development priorities.</p></div><div className="feature-grid">
       <article><Icon name="glasses" /><span className="mono">01 / DOCUMENTATION</span><h3>From observations to useful records</h3><p>Retain the image, spoken note, and site context together so observations are easier to revisit.</p></article>

@@ -1,9 +1,14 @@
+import { pageMetadata } from '@/lib/metadata';
 import { PageIntro } from '@/components/shared';
 import { site } from '@/lib/site';
-export const metadata = { title: 'Privacy Policy', alternates: { canonical: '/privacy/' } };
+export const metadata = pageMetadata(
+  'Website Privacy Policy',
+  'Read how the SafeSight website handles inquiry drafts, email, hosting, and embedded content, and how to contact the team about privacy.',
+  '/privacy/',
+);
 export default function Privacy() {
   return <>
-    <PageIntro label="Website privacy" title="Clear about your information."><p>Website privacy notice · Updated November 10, 2026</p></PageIntro>
+    <PageIntro label="Website privacy" title="Website privacy policy"><p>Website privacy notice · Updated November 10, 2026</p></PageIntro>
     <div className="container privacy-layout section">
       <nav className="privacy-nav" aria-label="Privacy sections"><span className="mono">ON THIS PAGE</span><a href="#scope">This website</a><a href="#inquiries">Your inquiry</a><a href="#tracking">Hosting & external content</a><a href="#retention">Email & retention</a><a href="#pilots">Future pilots</a><a href="#privacy-contact">Questions & requests</a></nav>
       <article className="prose">

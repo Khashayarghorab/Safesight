@@ -1,0 +1,37 @@
+.template {
+  background: var(--paper);
+  border-left: 3px solid var(--yellow);
+  padding: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.record {
+  margin: 1.5rem 0;
+}
+
+.record > div {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) 2.5fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.record dt {
+  font-weight: 600;
+}
+
+.record dd {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .record > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

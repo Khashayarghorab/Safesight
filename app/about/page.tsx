@@ -1,9 +1,14 @@
+import { pageMetadata } from '@/lib/metadata';
 import { Eyebrow, PageIntro, Pilot } from '@/components/shared';
 import { site } from '@/lib/site';
 import Link from 'next/link';
 import { Icon } from '@/components/icons';
 import ResearchAffiliation from '@/components/research-affiliation';
-export const metadata = { title: 'About', description: 'SafeSight is developing wearable AI to support safety documentation, AI-assisted review, and human-led follow-up for construction teams.', alternates: { canonical: '/about/' } };
+export const metadata = pageMetadata(
+  'About the SafeSight Research Project',
+  'Learn why EPM Research at the University of Calgary is developing SafeSight and how construction teams can help shape its wearable AI research.',
+  '/about/',
+);
 export default function About() {
   return <>
     <PageIntro label="About SafeSight" title="A clearer view of safety starts with people."><p>A research project connecting construction experience with wearable AI.</p></PageIntro>

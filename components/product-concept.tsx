@@ -6,7 +6,7 @@ export default function ProductConcept() {
   return <section className="concept-section" aria-labelledby="concept-heading">
     <div className="container section">
       <div className="section-heading">
-        <div><Eyebrow number="02">An example workflow</Eyebrow><h2 id="concept-heading">From observation<br />to follow-through.</h2></div>
+        <div><Eyebrow number="02">An example workflow</Eyebrow><h2 id="concept-heading">A construction safety observation report</h2></div>
         <p className="section-aside">See how a record could connect the steps.<br />Fictional example of the workflow in development.</p>
       </div>
       <div className="concept-board">
@@ -28,7 +28,7 @@ export default function ProductConcept() {
             <li><span className="concept-label"><Icon name="arrow" />04 / ACTION & VERIFICATION</span><h3>Assign, resolve, and check.</h3><dl className="concept-action-details"><div><dt>Owner</dt><dd>Area foreperson</dd></div><div><dt>Action</dt><dd>Relocate materials to the designated storage area.</dd></div><div><dt>Due</dt><dd>Before work resumes in the affected area.</dd></div><div><dt>Completion check</dt><dd>The supervisor rechecks the route and records that access has been restored.</dd></div></dl><span className="concept-status">Example status · Closed after human verification</span></li>
           </ol>
         </div>
-        <div className="concept-footer"><p>A static example, not a live inspection or product output. AI suggestions can be incorrect; site procedures and qualified judgment guide actual decisions.</p><Link className="text-link" href="/technology/">Explore the approach <Icon name="arrow" /></Link></div>
+        <div className="concept-footer"><p>A static example, not a live inspection or product output. AI suggestions can be incorrect; site procedures and qualified judgment guide actual decisions.</p><Link className="text-link" href="/resources/construction-safety-observation-report/">Get the report template <Icon name="arrow" /></Link></div>
       </div>
     </div>
   </section>;

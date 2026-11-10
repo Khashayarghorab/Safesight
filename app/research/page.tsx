@@ -1,3 +1,5 @@
+import { pageMetadata } from '@/lib/metadata';
+import Link from 'next/link';
 import { PageIntro, Eyebrow, Pilot } from '@/components/shared';
 import { Icon } from '@/components/icons';
 import { publications, ongoingStudies, researchPosts as curatedPosts } from '@/lib/research';
@@ -5,16 +7,16 @@ import { getResearchPosts } from '@/lib/research-feed.mjs';
 
 export const dynamic = 'force-static';
 
-export const metadata = {
-  title: 'Research',
-  description: 'Explore ongoing SafeSight research, selected publications, and EPM Research perspectives on AI, construction safety, and engineering practice.',
-  alternates: { canonical: '/research/' },
-};
+export const metadata = pageMetadata(
+  'AI Research for Construction Safety',
+  'Explore research on AI for construction safety, including job safety analysis, risk assessment, and ongoing studies at EPM Research.',
+  '/research/',
+);
 
 export default async function Research() {
   const researchPosts = await getResearchPosts(curatedPosts);
   return <>
-    <PageIntro label="Research / Studies & perspectives" title="Research, connected to practice."><p>Ideas and methods from construction safety, artificial intelligence, digital environments, and project knowledge.</p></PageIntro>
+    <PageIntro label="Research / Studies & perspectives" title="AI research for construction safety"><p>Read the studies behind SafeSight’s work on job safety analysis, risk assessment, and human review.</p></PageIntro>
     <nav className="container research-section-nav" aria-label="Research sections"><a href="#publications">Publications <span>{String(publications.length).padStart(2, '0')}</span></a><a href="#perspectives">From the blog <span>{String(researchPosts.length).padStart(2, '0')}</span></a><a href="#ongoing">Ongoing research <span>{String(ongoingStudies.length).padStart(2, '0')}</span></a></nav>
     <section id="publications" className="container research-library" aria-labelledby="publications-heading">
       <div className="research-library-heading"><div><Eyebrow>Explore the studies</Eyebrow><h2 id="publications-heading">Selected publications.</h2></div><span className="publication-count mono">{String(publications.length).padStart(2, '0')} STUDIES</span></div>
@@ -26,6 +28,11 @@ export default async function Research() {
             <h3 id={`publication-${publication.id}`}>{publication.publisherUrl ? <a href={publication.publisherUrl}>{publication.title}</a> : publication.title}</h3>
             <p className="publication-authors">{publication.authors.join(', ')}</p>
             <p className="publication-journal"><cite>{publication.journal ?? publication.venue}</cite><span>{publication.citation}</span></p>
+            {publication.id === 'llm-multiagent-jsa' && (
+              <Link className="text-link" href="/research/ai-construction-job-safety-analysis/">
+                How AI can support job safety analysis <Icon name="arrow" />
+              </Link>
+            )}
             {(publication.publisherUrl || publication.scholarUrl) && <div className="publication-links">{publication.publisherUrl && <a className="text-link" href={publication.publisherUrl} aria-label={`View publication: ${publication.title}`}>View publication <Icon name="diagonal" /></a>}{publication.scholarUrl && <a href={publication.scholarUrl} aria-label={`Google Scholar record: ${publication.title}`}>Google Scholar <Icon name="diagonal" /></a>}</div>}
           </div>
         </article>)}
