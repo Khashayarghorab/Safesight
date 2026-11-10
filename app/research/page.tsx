@@ -1,6 +1,9 @@
 import { PageIntro, Eyebrow, Pilot } from '@/components/shared';
 import { Icon } from '@/components/icons';
-import { publications, ongoingStudies, researchPosts } from '@/lib/research';
+import { publications, ongoingStudies, researchPosts as curatedPosts } from '@/lib/research';
+import { getResearchPosts } from '@/lib/research-feed.mjs';
+
+export const dynamic = 'force-static';
 
 export const metadata = {
   title: 'Research',
@@ -8,7 +11,8 @@ export const metadata = {
   alternates: { canonical: '/research/' },
 };
 
-export default function Research() {
+export default async function Research() {
+  const researchPosts = await getResearchPosts(curatedPosts);
   return <>
     <PageIntro label="Research / Studies & perspectives" title="Research, connected to practice."><p>Ideas and methods from construction safety, artificial intelligence, digital environments, and project knowledge.</p></PageIntro>
     <nav className="container research-section-nav" aria-label="Research sections"><a href="#publications">Publications <span>{String(publications.length).padStart(2, '0')}</span></a><a href="#perspectives">From the blog <span>{String(researchPosts.length).padStart(2, '0')}</span></a><a href="#ongoing">Ongoing research <span>{String(ongoingStudies.length).padStart(2, '0')}</span></a></nav>
@@ -30,8 +34,9 @@ export default function Research() {
     </section>
     <section id="perspectives" className="research-perspectives" aria-labelledby="perspectives-heading"><div className="container section">
       <div className="research-library-heading"><div><Eyebrow>From EPM Research</Eyebrow><h2 id="perspectives-heading">Ideas beyond the paper.</h2></div><a className="text-link" href="https://epmresearch.com/">Explore EPM Research <Icon name="diagonal" /></a></div>
-      <p className="perspectives-intro">Selected writing from EPM Research on AI, risk, and engineering practice. Read each article on its original website.</p>
+      <p className="perspectives-intro">Writing from EPM Research relevant to construction safety, AI-assisted assessment, and human-led decisions. Read each article on its original website.</p>
       <div className="research-post-grid">{researchPosts.map(post => <article className="research-post-card" key={post.id}>
+        {post.image && <img className="research-post-cover" src={post.image} alt={`Cover for ${post.title}`} width="1200" height="630" loading="lazy" decoding="async" referrerPolicy="no-referrer" />}
         <span className="mono">EPM RESEARCH / PERSPECTIVES</span><h3><a href={post.href}>{post.title}</a></h3><p>{post.description}</p><div className="research-post-meta"><span>{post.authors}</span><time dateTime={post.date}>{post.dateLabel}</time></div><a className="text-link" href={post.href} aria-label={`Read article: ${post.title}`}>Read on EPM Research <Icon name="diagonal" /></a>
       </article>)}</div>
     </div></section>

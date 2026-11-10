@@ -1,3 +1,38 @@
+# SafeSight-related blog filtering
+
+- Topic matching now filters all available RSS candidates before the three-card limit.
+- Relevant safety/assessment/smart-glasses and construction AI-method posts are included;
+  hiring, conference announcements, general news and unrelated project topics are excluded.
+- Curated editorial selections remain available as fallback/fill; duplicate URLs are removed.
+- node --test scripts/check-research-feed.mjs: 10 passed, 0 failed, including older relevant
+  posts after newer unrelated posts, unrelated-only feeds and duplicate-free fallback fill.
+- WSL production build and live-feed visual validation remain pending. Not deployed.
+
+---
+
+# Build-time EPM Research RSS integration - verification
+
+- Research page is an async force-static server page. It fetches EPM Research RSS during
+  generation, displays up to three newest unique posts and uses the existing curated cards
+  if the request fails or returns no usable entries. No publication/ongoing-study order changed.
+- The RSS reader supports the Substack RSS 2.0 item fields used here; it is not a general
+  XML processor. Entity/DOCTYPE declarations are rejected. Descriptions render as plain text,
+  not raw HTML. Links are restricted to known EPM Research hosts and HTTPS.
+- Feed request has an eight-second abort signal; feed parsing checks a 2 MB size bound.
+  Cover images are limited to approved publisher image hosts and use no-referrer requests.
+- Updated privacy text for external blog image requests; no subscription embed, client-side
+  RSS request, analytics or form submission was introduced.
+- node --test scripts/check-research-feed.mjs: 7 passed, 0 failed. Cases cover field extraction,
+  text/entity handling, ordering/deduplication, unsafe links, image hosts, unsupported markup,
+  successful fetch and network/HTTP/empty-feed fallback. Network tests use mocked responses.
+- Syntax parsing passed for app/research/page.tsx, app/privacy/page.tsx and lib/research.ts.
+- Still pending: WSL typecheck/production build and visual QA against a live fetched feed.
+  Actual feed item parsing has not been verified from this network-restricted shell.
+- No scheduled rebuild, push or deployment was performed for this integration. Blog cards
+  refresh with new CI builds; local Next.js fetch cache may retain an older response.
+
+---
+
 # Ongoing studies, blog links and affiliation refinement - verification pending
 
 - Added four user-supplied ongoing studies with focus/status: manuscript in progress
@@ -115,6 +150,18 @@ Rebuild in WSL, then recheck 320 px routes and menu, plus affected enlarged-text
 
 ## Verification limits
 
+### Homepage video addition — November 10, 2026
+
+Added owner-supplied YouTube video PQEO9dbzTLs after the homepage product concept.
+Source review confirms a native keyboard-operable Play button, titled responsive
+iframe, local illustrative cover, and no YouTube
+request from this section before Play. Local cover path exists; diff whitespace
+checks passed. Updated the privacy notice for optional YouTube processing.
+Typecheck cannot run on this Windows host because the installed TypeScript
+platform package is Linux-only; Next build also fails loading WSL-installed
+dependencies. WSL execution is denied here. Build, keyboard, mobile layout,
+embedding availability, and playback checks remain pending in WSL/browser.
+
 Clipboard-denied behavior, separate whitespace organization/message cases, enlarged text,
 reduced-motion emulation and live network/storage inspection remain untested. Unchanged source
 provides privacy/interaction evidence but does not substitute for those browser scenarios.
@@ -201,3 +248,10 @@ Verified November 7, 2026.
 No email was sent. Actual email-client launching/delivery and clipboard permissions depend on the visitor's device. The copy control and download destination were not end-to-end tested. This is not an exhaustive accessibility or cross-browser audit.
 
 Azure credentials, hosting behavior, DNS, and TLS have not been tested because deployment is not authorized. The public-launch privacy details still need owner review.
+
+## GenAI Dragon cover correction
+
+The curated record previously had no image. Added the original article image and a merge
+rule that retains it when RSS lacks a cover. Article matching handles publisher domain
+aliases and query strings without duplicating cards. All 11 feed tests passed, including
+missing-cover fallback and feed-cover precedence. Rebuild/visual verification is pending.

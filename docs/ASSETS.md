@@ -37,3 +37,28 @@ artwork is self-hosted unchanged at public/brand/epm-research.png (661 x 461) an
 public/brand/university-of-calgary.png (1292 x 964). Source files: epm.PNG and
 Logo-2 - Copy.png. Responsive presentation preserves proportions and original colours.
 No new affiliation, certification, funding, customer or pilot claim is inferred from the logos.
+
+
+## SafeSight video
+
+Owner-supplied YouTube video: https://youtu.be/PQEO9dbzTLs
+The homepage uses a local illustrative cover (`/images/site-perspective.webp`),
+not a video frame. The youtube-nocookie.com player mounts only after Play is selected.
+No video file or remote thumbnail is stored in the repository. The privacy notice
+describes the optional third-party player and its data flow.
+
+## RSS blog cover images
+
+The Research page can display RSS enclosure images from allowed Substack publisher image
+hosts. These covers are attributed through their article cards and link to the original post.
+They are fetched by the visitor browser, use no-referrer requests and are disclosed in the
+website privacy notice. Original SafeSight, EPM Research and university logos remain local.
+
+The curated GenAI Dragon card now specifies the original article image from EPM Research:
+https://substack-post-media.s3.amazonaws.com/public/images/8aefd1d4-9e76-4720-95ff-314ff19751e9_1287x1614.png
+A curated cover is retained when its RSS item omits an image, matching article paths across
+the custom domain and Substack domain. A valid feed-provided cover still takes precedence.
+
+The card uses the publisher CDN image URL returned by the original article image link;
+the underlying S3 object above is the source image identity. The CDN image was accessible
+in source retrieval; direct S3 retrieval could not be verified from this environment.

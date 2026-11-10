@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Eyebrow, FAQ, Pilot } from '@/components/shared';
 import { Icon } from '@/components/icons';
 import ProductConcept from '@/components/product-concept';
+import DemoVideo from '@/components/demo-video';
 export const metadata = { alternates: { canonical: '/' } };
 export default function Home() {
   return <>
@@ -22,6 +23,7 @@ export default function Home() {
       <div className="principles"><article><Icon name="glasses" /><div><h3>Easier safety documentation</h3><p>We're exploring ways to turn field observations and notes into useful records with less repeated entry.</p></div></article><article><Icon name="scan" /><div><h3>AI-assisted review</h3><p>Our intended approach would help teams organize observations and review potential hazards, with qualified people checking AI suggestions.</p></div></article><article><Icon name="people" /><div><h3>Corrective-action follow-up</h3><p>We're exploring support for recording who is responsible and checking progress. People would remain accountable for decisions and follow-through.</p></div></article></div>
     </section>
     <ProductConcept />
+    <DemoVideo />
     <section className="container section partner-section"><div className="partner-visual"><img src="/images/site-perspective.webp" alt="Illustrative supervisor reviewing a construction site" width="1400" height="1050" loading="lazy" /><div className="partner-image-footer"><span className="mono">BUILT AROUND PEOPLE.</span><Icon name="diagonal" /></div><span className="image-disclosure">Illustrative scene · not a SafeSight pilot</span></div><div className="partner-copy"><Eyebrow number="03">Who it is for</Eyebrow><h2>Built around<br />the people<br /><span className="text-muted">responsible for safety.</span></h2><p>For safety managers balancing time on site with the paperwork that follows. For construction teams who need observations to stay connected to the people and actions involved.</p><p>We welcome conversations about repeated entry, scattered notes, and the practical challenges of follow-up. Your experience can help shape the work.</p><ul className="partner-list"><li><Icon name="check" />Safety managers & site supervisors</li><li><Icon name="check" />Health & safety professionals</li><li><Icon name="check" />Research & technology collaborators</li></ul><Link href="/contact/#inquiry" className="text-link">Tell us about your workflow <Icon name="diagonal" /></Link></div></section>
     <FAQ />
     <Pilot />

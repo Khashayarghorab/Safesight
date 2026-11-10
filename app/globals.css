@@ -536,3 +536,26 @@ input,select,textarea{font-size:16px}
 .research-post-card>.text-link{font-size:11px;gap:16px}
 @media(max-width:1100px){.research-post-grid{grid-template-columns:1fr}.research-post-card{padding:30px}.research-post-card h3{max-width:780px}.research-post-meta{margin-top:0}.research-post-card>p{max-width:720px}}
 @media(max-width:760px){.institution-artwork{height:165px;padding:26px}.institution-logo-epm{width:145px}.institution-caption{margin-inline:22px}.institution-caption strong{font-size:17px}.research-section-nav{gap:8px 22px;margin-bottom:38px;padding-bottom:22px}.research-section-nav a{font-size:11px;gap:12px}.ongoing-research{padding-bottom:55px}.ongoing-grid{grid-template-columns:1fr;gap:16px}.ongoing-card{padding:25px 22px}.ongoing-card h3{font-size:23px}.research-post-card{padding:28px 22px}}
+
+.research-post-card>.research-post-cover{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;margin-bottom:24px;background:#f2f3ef}
+
+/* YouTube connects only after the visitor chooses to play. */
+.demo-section{border-top:1px solid var(--line)}
+.demo-heading{max-width:760px;margin-bottom:32px}
+.demo-heading h2{font-size:clamp(30px,4vw,52px);margin-bottom:20px}
+.demo-heading>p{font-size:15px;line-height:1.8;max-width:620px}
+.demo-player{aspect-ratio:16/9;background:#171b14;overflow:hidden}
+.demo-player iframe{display:block;width:100%;height:100%;border:0}
+.demo-play{position:relative;display:grid;place-items:center;width:100%;height:100%;border:0;padding:0;background:#171b14;color:#fff;cursor:pointer}
+.demo-play>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.demo-play-content{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px;font-size:clamp(22px,3vw,38px)}
+.demo-play-content>.mono{font-size:10px;letter-spacing:.1em}
+.demo-play-icon{display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--yellow);color:#171b14;font-size:25px;padding-left:4px;transition:transform .2s}
+.demo-play:hover .demo-play-icon{transform:scale(1.08)}
+.demo-play:focus-visible{outline:4px solid var(--yellow);outline-offset:-6px}
+.demo-poster-label{position:absolute;bottom:14px;left:18px;font-size:10px;color:#fff}
+.demo-caption{display:flex;justify-content:space-between;align-items:start;gap:25px;margin-top:20px}
+.demo-caption p{max-width:650px;font-size:12px;line-height:1.7;margin:0}
+.demo-caption a{flex-shrink:0;font-size:12px}
+@media(max-width:760px){.demo-caption{flex-direction:column;gap:15px}.demo-play-content{gap:10px}.demo-play-icon{width:48px;height:48px;font-size:19px}.demo-poster-label{font-size:8px;bottom:8px;left:10px}}
+@media(prefers-reduced-motion:reduce){.demo-play-icon{transition:none}}

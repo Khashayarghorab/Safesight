@@ -119,6 +119,7 @@ export const ongoingStudies: OngoingStudy[] = [
 ];
 
 export type ResearchPost = {
+  image?: string;
   id: string;
   title: string;
   description: string;
@@ -128,10 +129,11 @@ export type ResearchPost = {
   href: string;
 };
 
-// Curated links to original EPM Research posts; no external embeds or automatic feed.
+// Curated fallback when the build-time RSS feed is unavailable.
 export const researchPosts: ResearchPost[] = [
   {
     id: 'genai-dragon',
+    image: 'https://substackcdn.com/image/fetch/%24s_%21mPa2%21%2Cw_1456%2Cc_limit%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8aefd1d4-9e76-4720-95ff-314ff19751e9_1287x1614.png',
     title: 'How to Train Your GenAI Dragon',
     description: 'Adapting generative AI to construction and project management through prompting, retrieval, fine-tuning, and coordinated agents.',
     authors: 'Pouya Zangeneh and Khashayar Ghorab',

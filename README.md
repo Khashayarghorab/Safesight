@@ -87,11 +87,35 @@ No account, database or browser administration screen is required or included.
 Edit ongoingStudies in lib/research.ts to update titles, focus, status and optional progress.
 Do not add target journals or conference venues to those records. Published citations remain
 in publications. Edit researchPosts to curate EPM Research links with title, short original
-description, author attribution and publication date. These links are maintained manually;
-there is no external embed or automatic feed. The Research page counts each list separately.
+description, author attribution and publication date. These entries are the manually maintained fallback for the RSS feed. The Research page counts each list separately.
 Institutional links and logo presentation are in components/research-affiliation.tsx, used
 only on About. Original PNG files remain unchanged; CSS windows remove surrounding white
 space for balanced presentation without modifying logo artwork.
 
 Accepted conference papers can use venue instead of journal. Publisher and Scholar links
 are optional; omitted links are not rendered. Do not invent conference names or URLs.
+
+### Blog cards from EPM Research RSS
+
+The Research page loads https://epmresearch.com/feed during the static build and displays
+the three newest unique usable posts. Titles, author credits, dates, short plain-text excerpts
+and supported cover images come from the feed. The article links open the original publisher.
+No full article HTML, subscription widget or visitor-side feed request is embedded.
+
+lib/research-feed.mjs handles RSS item fields, trusted post/image URLs, an eight-second
+request timeout and a 2 MB feed limit. Feed failures, unsupported markup and empty usable
+results preserve the curated researchPosts fallback in lib/research.ts. Build logs indicate
+when the fallback is used. Do not change the publication list to update fetched blog cards.
+
+Run node --test scripts/check-research-feed.mjs, pnpm typecheck and pnpm build before release.
+The deployed cards are a build-time snapshot: fresh GitHub Actions builds fetch the feed.
+There is no per-visit refresh or scheduled rebuild in this change. Local Next.js fetch caching
+can reuse an earlier response; clear .next/cache when intentionally forcing a local refresh.
+Cover images are requested from allowed publisher image hosts when visitors view cards;
+see the updated website privacy notice. Brand artwork and construction images stay local.
+
+RSS cards are filtered for SafeSight-related safety, inspection, hazard/risk assessment,
+smart-glasses and relevant AI-method topics before selecting up to three. Hiring posts,
+conference/event announcements and general news are excluded. The curated researchPosts
+list is an explicit editorial selection and supplies missing cards or an unavailable feed.
+Adjust isSafeSightPost in lib/research-feed.mjs to refine topic rules as needed.
