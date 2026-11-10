@@ -1,6 +1,6 @@
 # SafeSight – Safety Through Intelligence
 
-A complete responsive Next.js + TypeScript + Tailwind business website prepared for safesight.ca and Azure Static Web Apps.
+A complete responsive Next.js + TypeScript + Tailwind business website configured for static hosting with GitHub Pages and the canonical domain safesight.ca.
 
 ## What is included
 
@@ -12,7 +12,7 @@ A complete responsive Next.js + TypeScript + Tailwind business website prepared 
 - Inquiry form that creates a reviewable email draft for **khashayar.ghorab@ucalgary.ca**.
 - Copy and download alternatives for visitors without a desktop email app.
 - Local fonts, optimized WebP images, metadata, sitemap, and robots file.
-- Static export, Azure configuration, and a manual-only deployment workflow.
+- Static export and a GitHub Pages workflow that builds and deploys pushes to main.
 
 SafeSight is consistently described as in development. There are no invented customers, performance numbers, certifications, team biographies, or operating pilots.
 
@@ -53,12 +53,12 @@ The form does not make a submission request, store details in localStorage, or a
 
 ## Deployment and remaining launch decisions
 
-Read [the Azure and domain guide](docs/DEPLOYMENT.md). No cloud resources have been created, no site published, and no DNS records changed.
+Read [the deployment guide](docs/DEPLOYMENT.md). The active workflow deploys to GitHub Pages
+after pushes to main and can also be dispatched manually.
 
-Before public launch:
-1. Approve the site and confirm the supplied email should remain public.
-2. Finalize the responsible business identity, retention schedule, and hosting details in the Privacy Policy.
-3. Authorize the Azure deployment, verify its preview, then connect safesight.ca.
+The owner authorized publication of the BRD-aligned messaging update. The inquiry flow still
+prepares a draft only. The privacy page retains its existing open business identity, retention
+and hosting details; this update does not establish those arrangements.
 
 ## Project map
 
@@ -69,6 +69,6 @@ Before public launch:
 - `public/images/`: self-hosted optimized construction imagery
 - `public/fonts/`: local Geist fonts and bundled license
 - `public/staticwebapp.config.json`: Azure routing and response headers
-- `.github/workflows/azure-static-web-apps.yml`: manual deployment
+- `.github/workflows/deploy-github-pages.yml`: build and GitHub Pages deployment
 - [Validation](docs/VALIDATION.md)
 - [Asset provenance and generation prompts](docs/ASSETS.md)

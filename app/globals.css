@@ -416,5 +416,5 @@ input,select,textarea{font-size:16px}
 .prose h2{font-size:26px}
 .prose p{font-size:13px}
 }
-@media(max-width:360px){.hero-inner{padding-inline:18px}.hero h1{font-size:38px}.hero-copy>p{font-size:17px}.hero-actions .button{padding-inline:15px;gap:15px;font-size:11px}.hero-coordinate{display:none}.container{width:calc(100% - 36px)}.introduction h2{font-size:34px}.pilot-content h2{font-size:38px}.pilot-content>.button{padding-inline:15px;font-size:11px;gap:20px}.inquiry-card{padding-inline:18px}.footer-main{column-gap:20px}}
+@media(max-width:360px){.nav-shell{gap:10px}.hero-inner{padding-inline:18px}.hero h1{font-size:38px}.hero-copy>p{font-size:17px}.hero-actions .button{padding-inline:15px;gap:15px;font-size:11px}.hero-coordinate{display:none}.container{width:calc(100% - 36px)}.introduction h2{font-size:34px}.pilot-content h2{font-size:38px}.pilot-content>.button{padding-inline:15px;font-size:11px;gap:20px}.inquiry-card{padding-inline:18px}.footer-main{column-gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
