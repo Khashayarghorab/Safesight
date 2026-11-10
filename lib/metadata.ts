@@ -3,7 +3,7 @@ import { site } from './site';
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   const fullTitle = `${title} | ${site.name}`;
-  const image = { url: '/images/construction-hero.webp', alt: 'Illustrative construction scene for SafeSight' };
+  const image = { url: '/images/construction-hero.webp', alt: 'Tower cranes above a concrete building under construction' };
 
   return {
     title: { absolute: fullTitle },

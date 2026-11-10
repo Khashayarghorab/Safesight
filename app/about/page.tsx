@@ -12,7 +12,7 @@ export const metadata = pageMetadata(
 export default function About() {
   return <>
     <PageIntro label="About SafeSight" title="A clearer view of safety starts with people."><p>A research project connecting construction experience with wearable AI.</p></PageIntro>
-    <div className="about-panorama"><img src="/images/construction-hero.webp" alt="Illustrative construction frame and tower cranes" width="1920" height="1080" /><div className="container"><span className="mono">OUR FOCUS / PEOPLE, CONTEXT, CONSTRUCTION</span><span>Illustrative construction scene</span></div></div>
+    <div className="about-panorama"><img src="/images/construction-hero.webp" alt="Tower cranes above a concrete building under construction" width="1920" height="1080" /></div>
     <section className="container section story-grid"><div><Eyebrow number="01">Why we’re here</Eyebrow><h2>Safety Through<br />Intelligence</h2></div><div><p className="lead">SafeSight is exploring wearable AI and human-centred decision support for construction safety.</p><p>We're taking a research-informed approach: learn from site workflows, investigate technical limitations, and evaluate ideas with industry collaborators. Qualified people would remain responsible for assessing risks and deciding what to do.</p><p>Industry conversations help us choose practical questions to investigate.</p></div></section>
     <ResearchAffiliation />
     <section className="container about-research-link"><div><Eyebrow>Explore the research</Eyebrow><h2>Research in progress. Ideas in practice.</h2><p>Read the studies and ideas informing our work.</p></div><Link className="text-link" href="/research/">Explore the research <Icon name="diagonal" /></Link></section>
