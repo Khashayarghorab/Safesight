@@ -150,6 +150,17 @@ Rebuild in WSL, then recheck 320 px routes and menu, plus affected enlarged-text
 
 ## Verification limits
 
+### Video startup refinement — November 10, 2026
+
+Replaced the click-mounted player and illustrative cover with an eagerly loaded
+YouTube privacy-enhanced iframe. Playback requires the native player Play control;
+there is no autoplay parameter. The player now starts loading when Home opens,
+rather than after the visitor clicks. Updated privacy and asset documentation
+and removed unused custom-player styles. Source and whitespace checks passed.
+Playback timing, keyboard/mobile QA, typecheck and production build remain pending
+in the working WSL/browser environment. Earlier click-to-load notes below describe
+the previous implementation and are superseded by this entry.
+
 ### Homepage video addition — November 10, 2026
 
 Added owner-supplied YouTube video PQEO9dbzTLs after the homepage product concept.
@@ -255,3 +266,12 @@ The curated record previously had no image. Added the original article image and
 rule that retains it when RSS lacks a cover. Article matching handles publisher domain
 aliases and query strings without duplicating cards. All 11 feed tests passed, including
 missing-cover fallback and feed-cover precedence. Rebuild/visual verification is pending.
+
+## Sample record refinement - November 10, 2026
+
+Replaced the abstract concept outline and unrelated site image with a fictional
+record showing observation metadata, an AI suggestion, a reviewer decision, an
+action owner, a due condition and a human completion check. No live controls,
+actual inspection results or operational product claims were introduced.
+Source checks confirm all four stages and the fictional/static labels.
+Build and visual checks remain pending in the working WSL/browser environment.

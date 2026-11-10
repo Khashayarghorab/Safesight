@@ -34,9 +34,9 @@ The canonical origin remains https://safesight.ca. Confirm the repository Pages 
 existing custom-domain configuration before asserting a domain change; none is part of this
 release. Do not create a second hosting workflow.
 
-The existing privacy notice still identifies unresolved business identity, retention and hosting
-details. Publication authorization does not supply those facts; they require an owner content
-update. No new collection, inquiry sending or field-data handling was introduced.
+The privacy notice describes GitHub Pages hosting, external video and blog image requests,
+and the browser-only inquiry draft. It does not promise a fixed email retention period.
+Keep the notice aligned with actual services and practices when those change.
 
 ## Rollback
 

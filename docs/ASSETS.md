@@ -42,8 +42,8 @@ No new affiliation, certification, funding, customer or pilot claim is inferred 
 ## SafeSight video
 
 Owner-supplied YouTube video: https://youtu.be/PQEO9dbzTLs
-The homepage uses a local illustrative cover (`/images/site-perspective.webp`),
-not a video frame. The youtube-nocookie.com player mounts only after Play is selected.
+The homepage loads the youtube-nocookie.com player eagerly when the page opens.
+YouTube supplies the preview; playback starts only when the visitor chooses Play.
 No video file or remote thumbnail is stored in the repository. The privacy notice
 describes the optional third-party player and its data flow.
 

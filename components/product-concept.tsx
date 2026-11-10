@@ -6,23 +6,29 @@ export default function ProductConcept() {
   return <section className="concept-section" aria-labelledby="concept-heading">
     <div className="container section">
       <div className="section-heading">
-        <div><Eyebrow number="02">A closer look</Eyebrow><h2 id="concept-heading">One observation.<br />A clearer next step.</h2></div>
-        <p className="section-aside">An example of the experience we are developing.<br />Illustrative content, not a working product.</p>
+        <div><Eyebrow number="02">An example workflow</Eyebrow><h2 id="concept-heading">From observation<br />to follow-through.</h2></div>
+        <p className="section-aside">See how a record could connect the steps.<br />Fictional example of the workflow in development.</p>
       </div>
       <div className="concept-board">
-        <div className="concept-toolbar"><span className="mono">SAFESIGHT / RECORD CONCEPT</span><span className="concept-badge">Illustrative example</span></div>
+        <div className="concept-toolbar"><span className="mono">SAFESIGHT / SAMPLE RECORD 001</span><span className="concept-badge">Illustrative workflow</span></div>
         <div className="concept-grid">
           <article className="concept-capture">
-            <div className="concept-photo"><img src="/images/site-perspective.webp" alt="Illustrative construction site used as context for a fictional safety record" width="1400" height="1050" loading="lazy" /><span className="mono">ILLUSTRATIVE SITE IMAGE</span></div>
-            <div className="concept-capture-copy"><span className="concept-label"><Icon name="glasses" />01 / FIELD OBSERVATION</span><h3>Keep the context.</h3><p className="concept-quote">“Materials appear to be narrowing an access route. Check the area before deciding what action is needed.”</p><p className="concept-caption">Fictional note for discussion. The image is not evidence of this condition.</p></div>
+            <div className="concept-capture-copy">
+              <span className="concept-label"><Icon name="glasses" />01 / FIELD OBSERVATION</span>
+              <h3>Materials in a pedestrian route.</h3>
+              <dl className="concept-record-meta"><div><dt>Location</dt><dd>Level 2 · East access route</dd></div><div><dt>Source</dt><dd>Site walk · Spoken note</dd></div><div><dt>Recorded by</dt><dd>Site supervisor</dd></div></dl>
+              <blockquote className="concept-quote">“Stored materials are narrowing the marked walkway near the east stair. Please review the route before work continues in this area.”</blockquote>
+              <p className="concept-caption">Sample field note. All locations, roles, and decisions in this record are fictional.</p>
+              <div className="concept-record-summary"><span className="mono">RECORD AT A GLANCE</span><dl><div><dt>Issue</dt><dd>Restricted pedestrian access</dd></div><div><dt>Action owner</dt><dd>Area foreperson</dd></div><div><dt>Example outcome</dt><dd>Route cleared and checked by supervisor</dd></div></dl></div>
+            </div>
           </article>
-          <ol className="concept-review">
-            <li><span className="concept-label"><Icon name="layers" />02 / AI SUGGESTION</span><h3>A prompt to look closer.</h3><p>Could access be restricted? AI could organize the observation and suggest questions for a qualified reviewer.</p><span className="concept-status">May be incomplete or incorrect</span></li>
-            <li><span className="concept-label"><Icon name="people" />03 / HUMAN REVIEW</span><h3>The decision stays with people.</h3><p>A safety professional would check the actual conditions, apply site procedures, and decide whether action is needed.</p><span className="concept-status">Human assessment required</span></li>
-            <li><span className="concept-label"><Icon name="arrow" />04 / FOLLOW-UP</span><h3>Make the next step visible.</h3><p>Intended support would help record who is responsible and review progress. People would confirm what has been done.</p><span className="concept-status">Proposed capability</span></li>
+          <ol className="concept-review" start={2}>
+            <li><span className="concept-label"><Icon name="layers" />02 / AI SUGGESTION</span><h3>Flag the access concern.</h3><p><strong>Potential issue:</strong> Restricted access and a possible trip hazard. Ask the reviewer to check the route and nearby material storage.</p><span className="concept-status">AI suggestion · Requires review</span></li>
+            <li><span className="concept-label"><Icon name="people" />03 / HUMAN REVIEW</span><h3>Check the conditions on site.</h3><p><strong>Reviewer:</strong> Site supervisor. In this example, the supervisor checks the walkway, confirms the obstruction, and requests that the materials be relocated under site procedures.</p><span className="concept-status">Decision recorded by the reviewer</span></li>
+            <li><span className="concept-label"><Icon name="arrow" />04 / ACTION & VERIFICATION</span><h3>Assign, resolve, and check.</h3><dl className="concept-action-details"><div><dt>Owner</dt><dd>Area foreperson</dd></div><div><dt>Action</dt><dd>Relocate materials to the designated storage area.</dd></div><div><dt>Due</dt><dd>Before work resumes in the affected area.</dd></div><div><dt>Completion check</dt><dd>The supervisor rechecks the route and records that access has been restored.</dd></div></dl><span className="concept-status">Example status · Closed after human verification</span></li>
           </ol>
         </div>
-        <div className="concept-footer"><p>This preview illustrates an idea. No record is created, analyzed, approved, or assigned.</p><Link className="text-link" href="/technology/">Explore the approach <Icon name="arrow" /></Link></div>
+        <div className="concept-footer"><p>A static example, not a live inspection or product output. AI suggestions can be incorrect; site procedures and qualified judgment guide actual decisions.</p><Link className="text-link" href="/technology/">Explore the approach <Icon name="arrow" /></Link></div>
       </div>
     </div>
   </section>;

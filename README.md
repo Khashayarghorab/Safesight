@@ -56,9 +56,9 @@ The form does not make a submission request, store details in localStorage, or a
 Read [the deployment guide](docs/DEPLOYMENT.md). The active workflow deploys to GitHub Pages
 after pushes to main and can also be dispatched manually.
 
-The owner authorized publication of the BRD-aligned messaging update. The inquiry flow still
-prepares a draft only. The privacy page retains its existing open business identity, retention
-and hosting details; this update does not establish those arrangements.
+The inquiry flow prepares a draft only. The privacy page describes GitHub Pages hosting,
+YouTube and blog image requests, and email handling without promising a fixed email deletion
+period. Changes to collection, delivery, or retention practices require a corresponding update.
 
 ## Project map
 
