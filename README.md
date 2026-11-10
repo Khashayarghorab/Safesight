@@ -9,7 +9,7 @@ A complete responsive Next.js + TypeScript + Tailwind business website configure
 - Custom editorial construction imagery, clearly presented as illustrative.
 - Illustrative product-record concept on Home and a keyboard-accessible technology walkthrough.
 - Expandable FAQ, mobile navigation with Escape support, and reduced-motion support.
-- Inquiry form that creates a reviewable email draft for **khashayar.ghorab@ucalgary.ca**.
+- Inquiry form that creates a reviewable email draft for **connect@safesight.ca**.
 - Copy and download alternatives for visitors without a desktop email app.
 - Local fonts, optimized WebP images, metadata, sitemap, and robots file.
 - Static export and a GitHub Pages workflow that builds and deploys pushes to main.
