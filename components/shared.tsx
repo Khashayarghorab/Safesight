@@ -6,7 +6,7 @@ export function Eyebrow({ children, number }: { children: React.ReactNode; numbe
 export function Pilot() {
   return <section className="pilot-cta"><div className="container pilot-content">
     <div><Eyebrow>A shared starting point</Eyebrow><h2>Useful ideas start<br />with a conversation<span className="yellow">.</span></h2><p>Help shape the safety workflows we're developing.</p></div>
-    <Link className="button" href="/contact/#inquiry">Explore Pilot Opportunities <Icon name="diagonal" /></Link>
+    <Link className="button" href="/contact/#inquiry">Start a conversation <Icon name="diagonal" /></Link>
   </div></section>;
 }
 export function PageIntro({ label, title, children }: { label: string; title: string; children: React.ReactNode }) {

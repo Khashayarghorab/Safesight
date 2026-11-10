@@ -26,7 +26,7 @@ export function Header() {
       </button>
       <nav id="main-navigation" aria-label="Main navigation" className={`main-navigation${open ? ' is-open' : ''}`}>
         <div className="nav-pages">{navigation.map(({ href, label }) => <Link key={href} href={href} aria-current={path.replace(/\/$/, '') === href.replace(/\/$/, '') ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>)}</div>
-        <Link className="button button-nav" href="/contact/#inquiry" onClick={() => setOpen(false)}>Explore Pilot Opportunities <Icon name="diagonal" /></Link>
+        <Link className="button button-nav" href="/contact/#inquiry" onClick={() => setOpen(false)}>Start a conversation <Icon name="diagonal" /></Link>
       </nav>
     </div>
   </header>;
@@ -36,7 +36,7 @@ export function Footer() {
     <div className="container footer-main">
       <div className="footer-brand"><Link className="brand" href="/" aria-label="SafeSight home"><img src="/brand/safesight-white.svg" width="2172" height="724" alt="SafeSight" /></Link><p>Safety Through<br />Intelligence</p><span className="mono muted">WEARABLE AI · HUMAN-LED SAFETY</span></div>
       <div className="footer-column"><p className="footer-label">Explore</p>{navigation.slice(1).map(({ href, label }) => <Link key={href} href={href}>{label}</Link>)}</div>
-      <div className="footer-column footer-contact"><p className="footer-label">Let’s build something meaningful.</p><a href={`mailto:${site.email}`} className="footer-email">{site.email}<Icon name="diagonal" /></a><p>For pilot conversations, research,<br />and technology collaboration.</p><span className="development-tag"><span className="status-dot" />In development</span></div>
+      <div className="footer-column footer-contact"><p className="footer-label">Let’s build something meaningful.</p><a href={`mailto:${site.email}`} className="footer-email">{site.email}<Icon name="diagonal" /></a><p>For research conversations,<br />and technology collaboration.</p><span className="development-tag"><span className="status-dot" />In development</span></div>
     </div>
     <div className="container footer-bottom"><span>© {new Date().getFullYear()} SafeSight</span><Link href="/privacy/">Privacy Policy</Link><a href="#main" className="back-top">Back to top <Icon name="arrow" /></a></div>
   </footer>;

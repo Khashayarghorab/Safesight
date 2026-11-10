@@ -27,3 +27,13 @@ Use case: photorealistic-natural. Asset type: editorial image for a premium cons
 ## Fonts
 
 Geist Sans and Geist Mono are self-hosted from the font distribution bundled with the installed Next.js package. The [official Geist license](https://github.com/vercel/geist-font/blob/main/LICENSE.txt) is included at `public/fonts/LICENSE.txt`. No external font request is made by the site.
+
+
+## Research affiliation logos
+
+The owner supplied the EPM Research and University of Calgary logos and confirmed that
+SafeSight is being developed at EPM Research at the University of Calgary. Original PNG
+artwork is self-hosted unchanged at public/brand/epm-research.png (661 x 461) and
+public/brand/university-of-calgary.png (1292 x 964). Source files: epm.PNG and
+Logo-2 - Copy.png. Responsive presentation preserves proportions and original colours.
+No new affiliation, certification, funding, customer or pilot claim is inferred from the logos.

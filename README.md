@@ -7,7 +7,7 @@ A complete responsive Next.js + TypeScript + Tailwind business website configure
 - Home, Technology, About, Contact, Privacy Policy, and custom 404 pages.
 - Supplied official logo and black / white / safety-yellow identity.
 - Custom editorial construction imagery, clearly presented as illustrative.
-- Interactive three-stage technology walkthrough with keyboard navigation.
+- Illustrative product-record concept on Home and a keyboard-accessible technology walkthrough.
 - Expandable FAQ, mobile navigation with Escape support, and reduced-motion support.
 - Inquiry form that creates a reviewable email draft for **khashayar.ghorab@ucalgary.ca**.
 - Copy and download alternatives for visitors without a desktop email app.
@@ -72,3 +72,26 @@ and hosting details; this update does not establish those arrangements.
 - `.github/workflows/deploy-github-pages.yml`: build and GitHub Pages deployment
 - [Validation](docs/VALIDATION.md)
 - [Asset provenance and generation prompts](docs/ASSETS.md)
+
+## Updating research publications
+
+Add or edit entries in lib/research.ts. Each entry contains a unique id, title, author list,
+journal, volume/issue/article citation, year, topic labels, publisher URL and Scholar URL.
+All publication cards share the same styling; array order controls display order.
+The Research page and its study count are generated from this list during the static build.
+Run pnpm typecheck and pnpm build, preview the page, then publish through the normal workflow.
+No account, database or browser administration screen is required or included.
+
+### Ongoing studies and blog links
+
+Edit ongoingStudies in lib/research.ts to update titles, focus, status and optional progress.
+Do not add target journals or conference venues to those records. Published citations remain
+in publications. Edit researchPosts to curate EPM Research links with title, short original
+description, author attribution and publication date. These links are maintained manually;
+there is no external embed or automatic feed. The Research page counts each list separately.
+Institutional links and logo presentation are in components/research-affiliation.tsx, used
+only on About. Original PNG files remain unchanged; CSS windows remove surrounding white
+space for balanced presentation without modifying logo artwork.
+
+Accepted conference papers can use venue instead of journal. Publisher and Scholar links
+are optional; omitted links are not rendered. Do not invent conference names or URLs.

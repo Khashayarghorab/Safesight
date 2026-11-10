@@ -1,3 +1,83 @@
+# Ongoing studies, blog links and affiliation refinement - verification pending
+
+- Added four user-supplied ongoing studies with focus/status: manuscript in progress
+  (experiments completed), planned, abstract prepared, planned. No target journals or
+  conference venue are stored or displayed for these entries.
+- Research now has anchor navigation for ongoing work, five published studies and three
+  curated EPM Research blog links. Each blog card credits authors, shows publication date
+  and links to the original; original short descriptions replace copied article bodies.
+- Blog sources verified November 9, 2026: epmresearch.com/p/how-to-train-your-genai-dragon,
+  epmresearch.com/p/brace-for-ai-risk-management-failures and epmresearch.com/p/ai-takes-shape.
+- About-only affiliation now links to https://epmresearch.com/ and https://www.ucalgary.ca/.
+  Revised optical sizing/white-space framing preserves original logo bytes and proportions.
+- Removed the named project-contact card and Email Khashayar wording. Generic SafeSight
+  contact wording uses the same existing public mailbox. Author names remain in citations.
+- Syntax checks passed for four affected TS/TSX modules. Data checks passed for 4 ongoing
+  studies, 5 publications, 3 attributed posts, venue exclusion, links, dates and contact wording.
+- Pending: WSL typecheck/build and visual QA for logo sizing, ongoing cards, section anchors,
+  long titles and outgoing links at desktop/phone widths. New work is not deployed.
+
+---
+
+# About affiliation and research library - verification pending
+
+- Per owner correction, institutional wording and logos appear only on About. Removed
+  Home affiliation component and global footer attribution. Home has no institutional claim.
+- Redesigned About affiliation as a distinct research-environment panel with two original
+  logo cards and descriptive captions, plus a link to the new Research page.
+- Added /research/ and navigation/sitemap entry. Five supplied studies display full titles,
+  supplied author lists, journals, citations, years, topics, publisher links and original
+  Google Scholar links. No abstracts or product-performance claims were added.
+- Publications live in lib/research.ts; README describes adding entries. First entry is
+  highlighted and display count derives from list length. No CMS or editing backend added.
+- Citation source basis: user bibliography plus publisher search records from ASCE, Elsevier
+  and MDPI. Direct ASCE page fetching returned 403; no claim of full-paper review is made.
+- All eight changed/new research-related TS/TSX modules parsed successfully. Research data
+  loaded under Node with five unique ids, populated citation fields and valid HTTPS URLs.
+- Static checks confirm no affiliation text/component in Home or the shared footer.
+- Added the fifth navigation link; menu switches to the existing mobile pattern at 1100 px
+  to allow room for Research. Keyboard/Escape logic and inquiry behavior are unchanged.
+- Pending: WSL typecheck/build and visual/browser QA of About/Research at 320, 390, 980,
+  1100 and 1440 px; menu operation, publication links, logo loading and heading readability.
+- This update remains local and is not deployed.
+
+---
+
+# Research affiliation update - verification pending
+
+- Owner confirmed development at EPM Research at the University of Calgary and supplied
+  both logos. Added an accessible shared affiliation section to Home/About, an About
+  introduction and a footer attribution.
+- Original image files copied without alteration; exact byte comparisons passed.
+- Syntax parsing passed for all four changed/new affiliation TSX files.
+- Remaining: WSL typecheck/build and responsive logo layout/image-loading check.
+- These additions and the preceding homepage improvements have not been deployed.
+
+---
+
+# Homepage clarity and product concept - verification pending
+
+New update requested after deployment of commit 094fb73.
+
+- Clearer hero supporting text and more specific safety-manager audience copy.
+- Static, accessible product concept replaces duplicated homepage technology tabs; the
+  technology page retains its original keyboard-operated walkthrough. The concept labels
+  all content as illustrative and makes no claim of live analysis, approval or assignment.
+- Primary navigation/hero/shared CTA uses Start a conversation; destination remains the
+  existing inquiry section. Contact title/eyebrow follow the same wording.
+- About adds Khashayar Ghorab as project contact using the existing public email. No
+  unverified credentials, founder biography, customers or partnerships were added.
+- All six edited TSX files parse successfully; new CSS was reviewed separately.
+  This is syntax review, not a new typecheck or production build.
+- Source byte comparison confirms inquiry, technology workflow, site settings, dependencies
+  and privacy page unchanged. Privacy business/retention facts and a real form-submission
+  service require information and a separately specified implementation.
+- Pending: WSL typecheck/build, 320/390/1440 px visual check, CTA destinations, concept
+  disclosure/readability, mobile menu, technology tabs, FAQ and inquiry regression.
+- No push or publication of this new update has occurred.
+
+---
+
 # BRD messaging update - browser verification
 
 Reviewed November 9, 2026. Results below apply to the first updated-copy export.

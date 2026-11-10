@@ -8,5 +8,6 @@ export const navigation = [
   { href: '/', label: 'Home' },
   { href: '/technology/', label: 'Technology' },
   { href: '/about/', label: 'About' },
+  { href: '/research/', label: 'Research' },
   { href: '/contact/', label: 'Contact' },
 ];
