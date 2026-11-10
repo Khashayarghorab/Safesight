@@ -9,7 +9,7 @@ export default function DemoVideo() {
     </div>
     <div className="demo-player">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/PQEO9dbzTLs"
+        src="https://www.youtube-nocookie.com/embed/9j4IovCv3cI"
         loading="eager"
         title="SafeSight video on YouTube"
         allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
