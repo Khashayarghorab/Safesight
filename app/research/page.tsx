@@ -16,7 +16,7 @@ export const metadata = pageMetadata(
 export default async function Research() {
   const researchPosts = await getResearchPosts(curatedPosts);
   return <>
-    <PageIntro label="Research / Studies & perspectives" title="AI research for construction safety"><p>Read the studies behind SafeSight’s work on job safety analysis, risk assessment, and human review.</p></PageIntro>
+    <PageIntro label="Research / Studies & perspectives" title="AI research for construction safety"><p>Explore the published papers and ongoing studies behind SafeSight.</p></PageIntro>
     <nav className="container research-section-nav" aria-label="Research sections"><a href="#publications">Publications <span>{String(publications.length).padStart(2, '0')}</span></a><a href="#perspectives">From the blog <span>{String(researchPosts.length).padStart(2, '0')}</span></a><a href="#ongoing">Ongoing research <span>{String(ongoingStudies.length).padStart(2, '0')}</span></a></nav>
     <section id="publications" className="container research-library" aria-labelledby="publications-heading">
       <div className="research-library-heading"><div><Eyebrow>Explore the studies</Eyebrow><h2 id="publications-heading">Selected publications.</h2></div><span className="publication-count mono">{String(publications.length).padStart(2, '0')} STUDIES</span></div>
