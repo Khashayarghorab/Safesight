@@ -29,14 +29,9 @@ Use case: photorealistic-natural. Asset type: editorial image for a premium cons
 Geist Sans and Geist Mono are self-hosted from the font distribution bundled with the installed Next.js package. The [official Geist license](https://github.com/vercel/geist-font/blob/main/LICENSE.txt) is included at `public/fonts/LICENSE.txt`. No external font request is made by the site.
 
 
-## Research affiliation logos
+## Research group logo
 
-The owner supplied the EPM Research and University of Calgary logos and confirmed that
-SafeSight is being developed at EPM Research at the University of Calgary. Original PNG
-artwork is self-hosted unchanged at public/brand/epm-research.png (661 x 461) and
-public/brand/university-of-calgary.png (1292 x 964). Source files: epm.PNG and
-Logo-2 - Copy.png. Responsive presentation preserves proportions and original colours.
-No new affiliation, certification, funding, customer or pilot claim is inferred from the logos.
+The About page displays the supplied EPM Research artwork from public/brand/epm-research.png (661 x 461).
 
 
 ## SafeSight video
@@ -52,7 +47,7 @@ describes the optional third-party player and its data flow.
 The Research page can display RSS enclosure images from allowed Substack publisher image
 hosts. These covers are attributed through their article cards and link to the original post.
 They are fetched by the visitor browser, use no-referrer requests and are disclosed in the
-website privacy notice. Original SafeSight, EPM Research and university logos remain local.
+website privacy notice. SafeSight and EPM Research logos are served locally.
 
 The curated GenAI Dragon card now specifies the original article image from EPM Research:
 https://substack-post-media.s3.amazonaws.com/public/images/8aefd1d4-9e76-4720-95ff-314ff19751e9_1287x1614.png

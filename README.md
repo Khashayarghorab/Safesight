@@ -88,9 +88,7 @@ Edit ongoingStudies in lib/research.ts to update titles, focus, status and optio
 Do not add target journals or conference venues to those records. Published citations remain
 in publications. Edit researchPosts to curate EPM Research links with title, short original
 description, author attribution and publication date. These entries are the manually maintained fallback for the RSS feed. The Research page counts each list separately.
-Institutional links and logo presentation are in components/research-affiliation.tsx, used
-only on About. Original PNG files remain unchanged; CSS windows remove surrounding white
-space for balanced presentation without modifying logo artwork.
+The About page uses components/research-affiliation.tsx for the EPM Research logo and link.
 
 Accepted conference papers can use venue instead of journal. Publisher and Scholar links
 are optional; omitted links are not rendered. Do not invent conference names or URLs.

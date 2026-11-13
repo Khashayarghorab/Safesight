@@ -456,27 +456,13 @@ input,select,textarea{font-size:16px}
 @media(max-width:980px){.concept-review li{padding:25px}.concept-capture-copy{padding:25px}.concept-photo img{height:250px}.project-contact{gap:40px}.project-contact-card{padding:28px}}
 @media(max-width:760px){.concept-grid{grid-template-columns:1fr}.concept-toolbar{padding:18px 20px;gap:12px}.concept-photo img{height:230px}.concept-capture-copy{padding:26px 22px}.concept-capture .concept-quote{font-size:17px}.concept-review li{padding:26px 22px}.concept-review h3{font-size:22px}.concept-footer{display:block;padding:22px}.concept-footer .text-link{margin-top:15px}.project-contact{grid-template-columns:1fr;gap:28px}.project-contact-card{padding:28px 22px}}
 
-/* About-only research environment. Original logo artwork remains unchanged. */
-.research-origin{background:var(--paper);color:var(--ink);border-block:1px solid var(--line)}
-.research-origin-heading{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:42px}
-.research-origin-heading .eyebrow{color:#626a58}
-.research-origin-heading p{font-size:20px;line-height:1.7;color:#646c5a;margin:0;max-width:450px}
-.research-origin-heading strong{font-weight:550;color:#22281b}
-.research-origin-institutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.institution-card{display:flex;flex-direction:column;margin:0;background:#fff;color:#171b14;min-width:0;border:1px solid #d8ddce}
-.institution-card:hover{border-color:#6e775f}
-.institution-artwork{height:205px;padding:30px;display:flex;align-items:center;justify-content:center}
-.institution-logo-window{position:relative;overflow:hidden;flex-shrink:1}
-.institution-logo-window img{position:absolute;max-width:none;height:auto;top:50%;left:50%;transform:translate(-50%,-50%)}
-.institution-logo-epm{width:170px;aspect-ratio:1.44}
-.institution-logo-epm img{width:108.4%}
-.institution-logo-university{width:360px;max-width:100%;aspect-ratio:3.35}
-.institution-logo-university img{width:116.4%}
-.institution-caption{border-top:1px solid #e5e8de;margin:0 28px;padding:23px 0;display:flex;flex-direction:column;gap:10px;flex:1}
-.institution-caption>.mono{font-size:9px;color:#777f6b}
-.institution-caption strong{font-size:18px;line-height:1.45;font-weight:500;letter-spacing:-.025em}
-.institution-visit{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:12px;line-height:1.5;margin-top:auto;padding-top:12px;color:#4f5941}
-.institution-visit svg{width:18px;height:18px}
+/* About research group */
+.research-origin{background:#fff;border-block:1px solid var(--line)}
+.research-origin-inner{display:grid;grid-template-columns:8.75rem minmax(0,42rem);align-items:center;gap:clamp(2rem,5vw,5rem);padding-block:clamp(2rem,4vw,3.75rem)}
+.research-origin-inner>img{width:100%;height:auto}
+.research-origin h2{font-size:clamp(1.6rem,3vw,2.25rem);margin:0}
+.research-origin p{margin:.6rem 0 1rem;line-height:1.6}
+@media(max-width:600px){.research-origin-inner{grid-template-columns:1fr;gap:1rem}.research-origin-inner>img{width:6rem}}
 .about-research-link{display:flex;justify-content:space-between;align-items:center;gap:40px;padding-block:75px}
 .about-research-link h2{font-size:clamp(30px,3vw,43px);margin-bottom:20px}
 .about-research-link p{font-size:14px;max-width:570px;margin:0}
@@ -510,7 +496,7 @@ input,select,textarea{font-size:16px}
 .nav-pages a{padding:14px 0;border-bottom:1px solid #e4e6df}
 .main-navigation .button{width:100%;margin-top:18px;font-size:12px;min-height:49px;padding:15px 18px}
 }
-@media(max-width:760px){.research-origin-heading{grid-template-columns:1fr;gap:25px;margin-bottom:30px}.research-origin-heading p{font-size:17px}.research-origin-institutions{grid-template-columns:1fr;gap:18px}.institution-artwork{height:180px}.about-research-link{display:block;padding-block:50px}.about-research-link>.text-link{margin-top:22px}.research-library{padding-bottom:65px}.research-library-heading{align-items:start;gap:15px}.publication-count{font-size:9px;padding:7px 9px}.publication{grid-template-columns:1fr;gap:18px;padding:28px 18px}.publication-index{flex-direction:row;justify-content:space-between;padding:0}.publication h3{font-size:24px}.publication-links{gap:20px}}
+@media(max-width:760px){.about-research-link{display:block;padding-block:50px}.about-research-link>.text-link{margin-top:22px}.research-library{padding-bottom:65px}.research-library-heading{align-items:start;gap:15px}.publication-count{font-size:9px;padding:7px 9px}.publication{grid-template-columns:1fr;gap:18px;padding:28px 18px}.publication-index{flex-direction:row;justify-content:space-between;padding:0}.publication h3{font-size:24px}.publication-links{gap:20px}}
 
 .research-section-nav{display:flex;flex-wrap:wrap;gap:12px 30px;padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:60px}
 .research-section-nav a{display:inline-flex;gap:18px;align-items:center;font-size:12px;padding:8px 0;border-bottom:1px solid transparent}
@@ -537,7 +523,7 @@ input,select,textarea{font-size:16px}
 .research-post-meta time{color:#8a917f;font-size:10px}
 .research-post-card>.text-link{font-size:11px;gap:16px}
 @media(max-width:1100px){.research-post-grid{grid-template-columns:1fr}.research-post-card{padding:30px}.research-post-card h3{max-width:780px}.research-post-meta{margin-top:0}.research-post-card>p{max-width:720px}}
-@media(max-width:760px){.institution-artwork{height:165px;padding:26px}.institution-logo-epm{width:145px}.institution-caption{margin-inline:22px}.institution-caption strong{font-size:17px}.research-section-nav{gap:8px 22px;margin-bottom:38px;padding-bottom:22px}.research-section-nav a{font-size:11px;gap:12px}.ongoing-research{padding-bottom:55px}.ongoing-grid{grid-template-columns:1fr;gap:16px}.ongoing-card{padding:25px 22px}.ongoing-card h3{font-size:23px}.research-post-card{padding:28px 22px}}
+@media(max-width:760px){.research-section-nav{gap:8px 22px;margin-bottom:38px;padding-bottom:22px}.research-section-nav a{font-size:11px;gap:12px}.ongoing-research{padding-bottom:55px}.ongoing-grid{grid-template-columns:1fr;gap:16px}.ongoing-card{padding:25px 22px}.ongoing-card h3{font-size:23px}.research-post-card{padding:28px 22px}}
 
 .research-post-card>.research-post-cover{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;margin-bottom:24px;background:#f2f3ef}
 
