@@ -93,27 +93,27 @@ export type OngoingStudy = {
 export const ongoingStudies: OngoingStudy[] = [
   {
     id: 'vlm-sft-rl',
-    title: 'Enhancing Vision-Language Models for Construction Safety Inspection through Supervised Fine-Tuning and Reinforcement Learning',
-    focus: 'Improving vision-language model performance through supervised fine-tuning (SFT) and group relative policy optimization (GRPO).',
+    title: 'Recognizing hazards in site photos',
+    focus: 'How can we help AI recognize and describe potential hazards in photos from construction sites?',
     status: 'Manuscript in progress',
     progress: 'Experiments completed',
   },
   {
     id: 'single-multi-agent-vlm',
-    title: 'Comparative Evaluation of Single-Agent and Multi-Agent Vision-Language Models for Construction Risk Assessment',
-    focus: 'Comparing small, standard, and multi-agent vision-language models on risk reasoning quality, computational cost, and response time.',
+    title: 'Comparing AI approaches to risk assessment',
+    focus: 'How well do different AI tools explain why a site condition could be risky, and how much time and computing power do they need?',
     status: 'Planned',
   },
   {
     id: 'smart-glasses-development',
-    title: 'Development and Preliminary Evaluation of an AI-Powered Smart Glasses System for Construction Safety Inspection',
-    focus: 'System development, integration, and preliminary technical evaluation of AI-powered smart glasses for construction safety inspection.',
+    title: 'Smart glasses for site inspections',
+    focus: 'How can smart glasses capture what an inspector sees and make it available for review?',
     status: 'Abstract prepared',
   },
   {
     id: 'human-ai-decision-support',
-    title: 'Evaluating Human–AI Decision Support Using Smart Glasses for Construction Hazard Recognition and Risk Assessment',
-    focus: 'Evaluating the effects of AI assistance on hazard recognition, decision-making, cognitive workload, and trust.',
+    title: 'How inspectors use AI suggestions',
+    focus: 'When smart glasses offer a suggestion, how does it affect what inspectors notice, what they trust, and what they decide to do?',
     status: 'Planned',
   },
 ];
