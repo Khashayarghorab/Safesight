@@ -458,11 +458,11 @@ input,select,textarea{font-size:16px}
 
 /* About research group */
 .research-origin{background:#fff;border-block:1px solid var(--line)}
-.research-origin-inner{display:grid;grid-template-columns:8.75rem minmax(0,42rem);align-items:center;gap:clamp(2rem,5vw,5rem);padding-block:clamp(2rem,4vw,3.75rem)}
+.research-origin-inner{display:grid;grid-template-columns:clamp(12rem,24vw,20rem) minmax(0,42rem);align-items:center;gap:clamp(2rem,5vw,5rem);padding-block:clamp(2rem,4vw,3.75rem)}
 .research-origin-inner>img{width:100%;height:auto}
 .research-origin h2{font-size:clamp(1.6rem,3vw,2.25rem);margin:0}
 .research-origin p{margin:.6rem 0 1rem;line-height:1.6}
-@media(max-width:600px){.research-origin-inner{grid-template-columns:1fr;gap:1rem}.research-origin-inner>img{width:6rem}}
+@media(max-width:600px){.research-origin-inner{grid-template-columns:1fr;gap:1rem}.research-origin-inner>img{width:min(60vw,14rem);justify-self:center}}
 .about-research-link{display:flex;justify-content:space-between;align-items:center;gap:40px;padding-block:75px}
 .about-research-link h2{font-size:clamp(30px,3vw,43px);margin-bottom:20px}
 .about-research-link p{font-size:14px;max-width:570px;margin:0}
@@ -537,3 +537,8 @@ input,select,textarea{font-size:16px}
 .demo-player iframe{display:block;width:100%;height:100%;border:0}
 @media(max-width:980px){.demo-section{gap:32px}}
 @media(max-width:760px){.demo-section{grid-template-columns:1fr;gap:26px;padding-block:36px}.demo-heading{max-width:none}.demo-heading h2{font-size:32px}.demo-heading h2 br{display:none}.demo-heading h2 .text-muted::before{content:' '}.demo-heading>p{max-width:420px}.demo-player{width:100%;max-width:560px;justify-self:center}}
+
+/* Make the image banner clearly usable as a link. */
+a.partner-image-footer{text-decoration:none}
+a.partner-image-footer:hover{text-decoration:underline;text-underline-offset:4px}
+a.partner-image-footer:focus-visible{outline:3px solid #111;outline-offset:-6px}
