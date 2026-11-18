@@ -3,7 +3,7 @@ import { Icon } from '@/components/icons';
 export default function ResearchTeam() {
   return (
     <section className="container research-team" aria-labelledby="research-team-heading">
-      <h2 id="research-team-heading">Research leadership</h2>
+      <h2 id="research-team-heading">Research team</h2>
       <div className="research-team-grid">
         <article className="research-team-profile">
           <img
