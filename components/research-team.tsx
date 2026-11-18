@@ -18,7 +18,7 @@ export default function ResearchTeam() {
           <div className="research-team-profile-copy">
             <h3>Dr. Pouya Zangeneh</h3>
             <p className="research-team-role">Endowed Chair in Engineering Project Management</p>
-            <p>Dr. Zangeneh studies how engineering organizations manage risk and make decisions across their project portfolios.</p>
+            <p>Dr. Zangeneh studies how generative AI can support construction and project management, and how engineering teams assess risk in complex projects.</p>
             <a className="text-link" href="https://profiles.ucalgary.ca/pouya-zangeneh">
               University of Calgary profile <Icon name="diagonal" />
             </a>
