@@ -37,7 +37,10 @@ export default function ResearchTeam() {
           <div className="research-team-profile-copy">
             <h3>Khashayar Ghorab</h3>
             <p className="research-team-role">PhD Candidate in Civil Engineering</p>
-            <p>Khashayar studies how construction teams can use AI and smart glasses to spot hazards and decide how to respond on site.</p>
+            <p>Khashayar develops AI methods for recognizing construction hazards and assessing risk. He also evaluates how smart glasses can support safety decisions on site.</p>
+            <a className="text-link" href="https://scholar.google.com/citations?user=-rhiHcAAAAAJ&amp;hl=en">
+              Google Scholar profile <Icon name="diagonal" />
+            </a>
           </div>
         </article>
       </div>
