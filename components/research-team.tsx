@@ -38,8 +38,8 @@ export default function ResearchTeam() {
             <h3>Khashayar Ghorab</h3>
             <p className="research-team-role">PhD Candidate in Civil Engineering</p>
             <p>Khashayar&rsquo;s research explores how AI and smart glasses can help construction teams recognize hazards and assess risk on site.</p>
-            <a className="text-link" href="https://scholar.google.com/citations?user=-rhiHcAAAAAJ&amp;hl=en">
-              Google Scholar profile <Icon name="diagonal" />
+            <a className="text-link" href="https://ca.linkedin.com/in/khashayarghorab">
+              LinkedIn profile <Icon name="diagonal" />
             </a>
           </div>
         </article>
