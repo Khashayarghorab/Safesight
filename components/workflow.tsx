@@ -2,10 +2,39 @@
 import { useRef, useState } from 'react';
 import { Icon } from './icons';
 const stages = [
-  { label: 'Observe', body: 'Exploring how smart glasses and field notes could capture context for clearer safety records.', icon: 'glasses' as const, panelLabel: '01 / FIELD OBSERVATION', panelTitle: 'The context is on site.', panelBody: 'During a site walk, a supervisor notices materials narrowing an access route. A photo and a spoken note could record where the materials are and how they affect access.', tags: ['Worker perspective', 'Site context'], note: 'An observation for human review, not a confirmed hazard.' },
-  { label: 'Understand', body: 'Evaluating how AI could organize observations and suggest potential hazards for qualified human review.', icon: 'layers' as const, panelLabel: '02 / AI-ASSISTED REASONING', panelTitle: 'A question worth checking.', panelBody: 'AI could help organize the note and ask whether access is restricted. A qualified person would check the evidence and site context.', tags: ['Potential risk', 'Context matters'], note: 'AI may be incomplete or incorrect. Verification is essential.' },
-  { label: 'Decide', body: 'Exploring support for people to record action responsibilities and review progress after deciding what is needed.', icon: 'shield' as const, panelLabel: '03 / HUMAN REVIEW', panelTitle: 'The decision stays human.', panelBody: 'A qualified person would check the route and decide what action is needed. Intended follow-up support would help record responsibility and progress; people would verify completion.', tags: ['Human decisions', 'Intended follow-up'], note: 'No autonomous safety decisions or guaranteed detection.' },
-];
+  {
+    label: 'Observe',
+    body: 'Exploring how smart glasses and field notes could capture context for clearer safety records.',
+    icon: 'glasses',
+    panelLabel: 'FIELD OBSERVATION',
+    panelTitle: 'The context is on site.',
+    panelBody: 'During a site walk, a supervisor photographs a slab edge and records a spoken note about the location for review.',
+  },
+  {
+    label: 'Understand',
+    body: 'Evaluating how AI could organize observations and suggest potential hazards for qualified human review.',
+    icon: 'layers',
+    panelLabel: 'AI-ASSISTED REASONING',
+    panelTitle: 'A question worth checking.',
+    example: '“I don’t see a guardrail along the edge of this slab. Can you check what fall protection is in place on site?”',
+  },
+  {
+    label: 'Decide',
+    body: 'A qualified person checks the observation on site and decides whether action is needed.',
+    icon: 'shield',
+    panelLabel: 'HUMAN REVIEW',
+    panelTitle: 'The decision stays human.',
+    panelBody: 'A qualified person checks what fall protection is in place at the slab edge and decides whether any action is needed.',
+  },
+  {
+    label: 'Act',
+    body: 'Assign the action, track progress, and verify completion.',
+    icon: 'check',
+    panelLabel: 'FOLLOW-UP',
+    panelTitle: 'Follow through on the action.',
+    panelBody: 'If action is needed, the team records who is responsible, tracks progress, and verifies on site that the agreed action is complete.',
+  },
+] as const;
 export default function Workflow() {
   const [active, setActive] = useState(0);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
@@ -26,8 +55,21 @@ export default function Workflow() {
       <p className="workflow-disclaimer">An intended workflow, currently under development.<br />Capabilities and field performance are not yet validated.</p>
     </div>
     <div id="workflow-panel" role="tabpanel" aria-labelledby={`stage-${active}`} tabIndex={0} className="workflow-panel">
-      <div className="workflow-image"><img src="/images/site-perspective.webp" alt="Supervisor looking across a concrete building site" width="1400" height="1050" loading="lazy" /><div className="viewfinder" aria-hidden="true"><span /><span /><span /><span /></div><div className="workflow-image-label"><Icon name={stage.icon} /><span>{stage.label}</span><span className="mono">0{active + 1} / 03</span></div></div>
-      <div className="workflow-card" key={active}><span className="mono panel-eyebrow">{stage.panelLabel}</span><h3>{stage.panelTitle}</h3><p>{stage.panelBody}</p><div className="workflow-tags">{stage.tags.map(tag => <span key={tag}>{tag}</span>)}</div><p className="panel-note"><Icon name="eye" />{stage.note}</p></div>
+      <div className="workflow-image"><img src="/images/site-perspective.webp" alt="Illustrative photo of a supervisor looking across a concrete building site" width="1400" height="1050" loading="lazy" /><div className="viewfinder" aria-hidden="true"><span /><span /><span /><span /></div><div className="workflow-image-label"><Icon name={stage.icon} /><span>{stage.label}</span><span className="mono">0{active + 1} / 0{stages.length}</span></div></div>
+      <div className="workflow-card" key={active}>
+        <span className="mono panel-eyebrow">0{active + 1} / {stage.panelLabel}</span>
+        <h3>{stage.panelTitle}</h3>
+        {'example' in stage ? (
+          <div className="safi-example">
+            <img src="/images/safi.webp" alt="Safi, an orange mascot in a hard hat" width="66" height="78" />
+            <div>
+              <span className="mono">Example AI suggestion</span>
+              <strong>Meet Safi</strong>
+              <p>{stage.example}</p>
+            </div>
+          </div>
+        ) : <p>{stage.panelBody}</p>}
+      </div>
     </div>
   </div>;
 }
